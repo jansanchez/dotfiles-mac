@@ -1,0 +1,58 @@
+
+syntax on
+
+nmap <silent> <F3> :NERDTreeToggle<CR>
+let NERDTreeMapOpenInTab='<ENTER>'
+
+set exrc
+set secure
+
+set wildignore+=tags
+set wildignore+=*/tmp/*
+set wildignore+=*/vendor/*
+set wildignore+=*/spec/vcr/*
+set wildignore+=*/chef/*
+set wildignore+=*/coverage/*
+set wildignore+=*.png,*.jpg,*.otf,*.woff,*.jpeg,*.orig
+
+set wildignore+=*resources/*
+set wildignore+=*solr/*
+set wildignore+=*sql/*
+set wildignore+=*.git/*
+set wildignore+=*.csv,*.xlsx,*.doc,*.docx,*.sql
+set wildignore+=*migrations/*
+set wildignore+=*docs/*
+set wildignore+=*out/*
+set wildignore+=*src/lib/*
+set wildignore+=*provision/*
+
+
+set wildignore+=*node_modules/*
+
+
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = '¦'
+
+"colorear los Line Numbers Left de amarillo
+highlight LineNr ctermfg=yellow
+
+"colorear el cursor line seleccionado
+highlight CursorLine term=bold cterm=bold guibg=black ctermfg=gray
+
+autocmd BufNewFile,BufRead *.jade set filetype=jade
+autocmd BufNewFile,BufRead *.styl set filetype=stylus
+
+" lineas para ejecutar el pathogen
+execute pathogen#infect()
+filetype plugin indent on
+
+" colorschemes favorites
+
+"colorscheme desertEx
+"colorscheme camo
+"colorscheme corn
+"colorscheme corn
+
+
+colorscheme molokai
