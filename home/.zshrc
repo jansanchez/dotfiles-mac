@@ -1,3 +1,5 @@
+
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -80,3 +82,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.bash_aliases
+
+. `brew --prefix`/etc/profile.d/z.sh
