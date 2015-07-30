@@ -45,7 +45,6 @@ alias   gclone='echo " > git clone " && git clone '
 alias   gcount='echo " > git shortlog -s -n --all" && git shortlog -s -n --all'
 alias   gla='echo " > git log --author" && git log --author '
 
-alias   killer="tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}"
 
 alias   gusers="git log --format='%aN' | sort -u"
 
@@ -79,7 +78,9 @@ echo " > sudo service $1 restart"
 sudo service $1 restart
 }
 
-
+function father_branch() {
+git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//'
+}
 
 
 # Easier navigation: .., ..., ~ and -
@@ -235,4 +236,13 @@ alias tmuxjp='~/dotfiles-mac/tmxs/jqueryplugins'
 
 alias tmuxo='~/dotfiles-mac/tmxs/ofertop'
 
+alias j='cd .. && '
+
+function m() {
+    vim $1
+}
+
+
 export TERM=xterm-256color
+
+
