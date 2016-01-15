@@ -69,8 +69,8 @@ git log --name-only --pretty=format: --author="$1" --since=$2 | sort | uniq
 }
 
 function access() {
-echo " > ssh -v ${1:-'git@git.ec.pe'}"
-ssh -v ${1:-'git@git.ec.pe'}
+echo " > ssh -v ${1:-'cuenta@dominio.pe'}"
+ssh -v ${1:-'cuenta@dominio.pe'}
 }
 
 function restart() {
@@ -210,31 +210,11 @@ alias android="bash ~/applications/android-studio/bin/studio.sh &"
 
 alias home='cd ~/'
 
-#alias chaplin='coffee --watch --bare --output src/public/static/js/um/ frontend/chaplin/coffee/'
-
-#alias css='cd ~/htdocs/urbania3/frontend/css && node init.njs && cd ~/htdocs/urbania3/'
-
-alias css='cd ~/htdocs/aptitus2/frontend && watch -n 1 node init.njs'
-
-alias cafe='coffee --watch --bare --output src/public/static/js/ frontend/cafe/'
-
-alias urbania='cd ~/htdocs/urbania3/'
-
-alias doc='cd ~/htdocs/urbania3/src/public/static/js && yuidoc . && urbania'
-
 alias jadeflux='jade --pretty --watch '
-
-alias tmuxu='~/dotfiles-mac/tmxs/urbania3'
-
-alias tmuxn='~/dotfiles-mac/tmxs/neoauto2'
 
 alias tmuxd='~/dotfiles-mac/tmxs/development'
 
-alias tmuxa='~/dotfiles-mac/tmxs/aptitus2'
-
 alias tmuxjp='~/dotfiles-mac/tmxs/jqueryplugins'
-
-alias tmuxo='~/dotfiles-mac/tmxs/ofertop'
 
 alias j='cd .. && '
 
